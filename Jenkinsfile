@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {
                     // Your Angular build commands
-                    sh 'cd Frontend && npm install && npm run build'
+                    sh 'cd DEVOPS-FRONTEND && npm install && npm run build'
                 }
             }
         }
