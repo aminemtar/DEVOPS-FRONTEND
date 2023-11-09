@@ -20,7 +20,7 @@ tools { nodejs '19.9.0'}
                 script {
                     // Your Docker build commands
                     
-                    sh 'docker build -t angular-image .'
+                    sh 'sudo docker build -t angular-image .'
                 }
             }
         }
