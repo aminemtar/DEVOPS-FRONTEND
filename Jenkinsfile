@@ -3,7 +3,12 @@ pipeline {
     agent any
 tools { nodejs '19.9.0'}
     stages {
-
+stage('Checkout Front Repo') {
+            steps {
+              git branch: 'main',
+              url: 'https://github.com/aminemtar/DEVOPS-FRONTEND.git''
+            }
+        }
        
          
         stage('Build ') {
