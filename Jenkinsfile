@@ -6,7 +6,7 @@ tools { nodejs '19.9.0'}
 
        
          
-        stage('Build Frontend') {
+        stage('Build ') {
             steps {
                 // Checkout the Angular frontend repository
                 git branch: 'main',
