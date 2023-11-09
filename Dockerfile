@@ -1,11 +1,11 @@
 # stage 1
 FROM node:latest as node
-WORKDIR /usr/local/app
+WORKDIR /app
 
-COPY ./ /usr/local/app/
+COPY . .
 RUN npm install
 RUN npm run build 
 
 # stage 2
 FROM nginx:alpine
-COPY --from=node /usr/local/app/dist/summer-workshop-angular /usr/share/nginx/html
+COPY --from=node /usr/local/app/dist/summer-workshop-angular .
