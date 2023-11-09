@@ -8,7 +8,9 @@ pipeline {
             steps {
                 script {
                     // Your Angular build commands
-                    sh 'cd DEVOPS-FRONTEND && npm install && npm run build'
+                    git branch: 'main',
+                    url: 'https://github.com/aminemtar/DEVOPS-FRONTEND.git'
+                    sh 'npm install && npm run build'
                 }
             }
         }
