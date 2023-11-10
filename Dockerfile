@@ -2,11 +2,10 @@
 FROM node:latest as node
 WORKDIR /usr/local/app
 
-COPY ./ /usr/local/app
+COPY ./ /usr/local/app/
 RUN npm install
-RUN npm run build 
+RUN npm run build --prod
 
 # stage 2
-FROM nginx:latest
-COPY --from=node /app/dist/summer-workshop-angular /usr/share/nginx/html
-Expose 80
+FROM nginx:alpine
+COPY --from=node /usr/local/app/dist/summer-workshop-angular /usr/share/nginx/html
