@@ -15,7 +15,7 @@ tools { nodejs '19.9.0'}
             }
         }
 
-        stage('Build Docker Images') {
+     /*   stage('Build Docker Images') {
             steps {
                 script {
                     // Your Docker build commands
@@ -24,7 +24,7 @@ tools { nodejs '19.9.0'}
                 }
             }
         }
-
+*/
       
     }
 }
