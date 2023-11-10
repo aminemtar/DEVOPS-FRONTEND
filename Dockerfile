@@ -1,5 +1,5 @@
 # stage 1
-FROM node:latest as node
+FROM node:12 as node
 WORKDIR /usr/local/app
 
 COPY ./ /usr/local/app/
